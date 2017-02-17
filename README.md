@@ -5,3 +5,5 @@
 
 2. js数组排序---sort.js
     参考链接：http://www.jb51.net/article/81520.htm
+
+3. sort()方法按字符编码排序问题的解决办法，以及如何按某一项属性排序。
