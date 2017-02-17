@@ -81,6 +81,7 @@ function selectSort(arr) {
 }
 
 //插入排序
+//工作原理是通过构建有序序列，对于未排序数据，在已排序序列中从后向前扫描，找到相应位置并插入。
 function insertSort(arr) {
     var len = arr.length;
     for(var i = 0; i < len - 1; i++){
@@ -118,6 +119,8 @@ function shellSort(arr) {
 }
 
 //快速排序
+//快速排序的基本思想：通过一趟排序将待排记录分隔成独立的两部分
+// 其中一部分记录的关键字均比另一部分的关键字小，则可分别对这两部分记录继续进行排序，以达到整个序列有序。
 function quickSort(arr) {
     var len = arr.length;
     if(len <= 1){
@@ -139,6 +142,8 @@ function quickSort(arr) {
 
 
 //归并算法
+//归并排序是建立在归并操作上的一种有效的排序算法。该算法是采用分治法（Divide and Conquer）的一个非常典型的应用。归并排序是一种稳定的排序方法。
+// 将已有序的子序列合并，得到完全有序的序列；即先使每个子序列有序，再使子序列段间有序。若将两个有序表合并成一个有序表，称为2-路归并
 function MergeSort(array) {
     var length = array.length;
     if (length <= 1) {
