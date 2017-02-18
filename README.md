@@ -14,3 +14,5 @@
     参考链接：http://www.cnblogs.com/Leo_wl/p/6111533.html
 
 6. 生成指定长度的随机字符串---random_str.js
+
+7. 生成斐波那契数---get_febonacci.js
