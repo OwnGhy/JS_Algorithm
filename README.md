@@ -11,3 +11,4 @@
 4. 计算字符串中出现次数最多的字符---count_most_char.js
 
 5. 交换两个变量的值的方法---exchange_var.js
+    参考链接：http://www.cnblogs.com/Leo_wl/p/6111533.html
