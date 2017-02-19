@@ -16,3 +16,5 @@
 6. 生成指定长度的随机字符串---random_str.js
 
 7. 生成斐波那契数---get_febonacci.js
+
+8. 判断素数，找出n-m间的素数个数，并打印---prime.js
