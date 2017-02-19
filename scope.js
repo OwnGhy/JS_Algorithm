@@ -35,3 +35,21 @@ function bbb() {
     aaa3();
 }
 bbb();
+
+
+//    ------------------------------------
+
+var m = 20;
+function c() {
+    console.log(m);//20
+}
+c();
+// ----------------------------------
+// 这种情况主要需注意变量会预解析的问题
+var n = 20;
+function d() {
+    console.log(n);//undefined
+    var n = 10;
+}
+
+d();
