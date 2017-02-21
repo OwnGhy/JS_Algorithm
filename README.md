@@ -20,3 +20,6 @@
 8. 判断素数，找出n-m间的素数个数，并打印---prime.js
 
 9. 关于变量访问的作用域链情况---scope.js
+
+10. 平铺多维数组的方法---flattenning_array.js
+    参考链接：http://www.cnblogs.com/A-Iverson/p/5649976.html
