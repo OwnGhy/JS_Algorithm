@@ -24,5 +24,5 @@
 10. 平铺多维数组的方法---flattenning_array.js
     参考链接：http://www.cnblogs.com/A-Iverson/p/5649976.html
     
-11. 判断一个字符串是不是回文---palindrome.js
+11. 字符串的一系列处理方法：回文判断、翻转---string_operation.js
     参考链接：http://www.cnblogs.com/caojiayan/p/6238212.html?utm_source=itdadao&utm_medium=referral
