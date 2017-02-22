@@ -21,3 +21,26 @@ function reverseString(str) {
     return str;
 }
 reverseString("hello");//olleh
+
+//找到字符串中最大的单词的字数
+function findLongest(str) {
+    var newArr = str.toLowerCase().split(/[\ |\!|\;|\:|\"|\'|\,|\.|\?]/g);
+    newArr.sort(function (a,b) {
+        return b.length - a.length;
+    });
+    return newArr[0].length;
+}
+
+console.log(findLongest('abd dhdddsdkjjfskjdfh,ahjsd!kasjhda sjdhasdh sakjdh aksjdh'));//17
+
+//将字符串每个单词的首字母大写
+function firstUpperCase(str) {
+    var newArr = str.toLowerCase().split(/[\ |\!|\;|\:|\"|\'|\,|\.|\?]/g);
+    for(var i = 0; i < newArr.length; i++){
+        newArr[i] = newArr[i][0].toUpperCase()+newArr[i].substring(1,newArr[i].length);
+    }
+    var newStr = newArr.join(" ");
+    return newStr
+}
+console.log(firstUpperCase('hello world,today is a bad day.but have to stick on'));
+//Hello World Today Is A Bad Day But Have To Stick On
