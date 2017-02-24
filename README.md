@@ -26,3 +26,6 @@
     
 11. 字符串的一系列处理方法：回文判断、翻转、单词长度最大、单词首字母大写---string_operation.js
     参考链接：http://www.cnblogs.com/caojiayan/p/6238212.html?utm_source=itdadao&utm_medium=referral
+    
+12. 客户端检测---detectClient.js
+    参考js高级程序设计3
