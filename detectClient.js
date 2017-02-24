@@ -1,3 +1,7 @@
+/*
+* 参考JS高级程序设计 的客户端检测的解决办法
+ */
+
 var client = function () {
     //呈现引擎
     var engine = {
