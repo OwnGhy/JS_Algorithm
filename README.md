@@ -34,3 +34,4 @@
 
 14. js原生实现jquery---myJquery.js
     参考链接：http://www.cnblogs.com/lzm1989/p/6293269.html
+    自己笨办法---myJqueryAll.js
