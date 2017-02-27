@@ -29,3 +29,8 @@
     
 12. 客户端检测---detectClient.js
     参考js高级程序设计3
+    
+13. 关于继承的一些问题---inhreit_issue.js
+
+14. js原生实现jquery---myJquery.js
+    参考链接：http://www.cnblogs.com/lzm1989/p/6293269.html
