@@ -1,3 +1,4 @@
+//找出字符串中出现次数最多的字符
 function count_most_char(str) {
     if(str.length <= 1){
         return str;
