@@ -35,3 +35,6 @@
 14. js原生实现jquery---myJquery.js
     参考链接：http://www.cnblogs.com/lzm1989/p/6293269.html
     自己笨办法---myJqueryAll.js
+
+15. EventUtil对象的实现，用于解决各个浏览器事件处理的兼容性，平衡不同浏览器间事件事件的差异货事件的方法的差异。
+    参考链接http://www.cnblogs.com/hykun/p/EventUtil.html
