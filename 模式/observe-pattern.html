@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<button id="test">test</button>
+<script>
+    function EventTarget(){
+        this.handlers = {};
+    }
+    EventTarget.prototype = {
+        constructor: EventTarget,
+        addHandler: function(type, handler){
+            //type 添加的事件类型，handler是这个事件的回调函数名
+            if (typeof this.handlers[type] == "undefined"){
+                this.handlers[type] = [];
+            }
+            this.handlers[type].push(handler);
+        },
+        fire: function(event){
+            if (!event.target){
+                event.target = this;
+            }
+            if (this.handlers[event] instanceof Array){
+                var handlers = this.handlers[event];
+                for (var i=0, len=handlers.length; i < len; i++){
+                    handlers[i](event); //执行事件
+                }
+            }
+        },
+        removeHandler: function(type, handler){
+            if (this.handlers[type] instanceof Array){
+                var handlers = this.handlers[type];
+                for (var i=0, len=handlers.length; i < len; i++){
+                    if (handlers[i] === handler){
+                        break;
+                    }
+                }
+                handlers.splice(i, 1); //将其移除数组
+            }
+        }
+    };
+
+    //初始化
+    var EventTarget = new EventTarget(),
+        handler1 = function () {
+            console.log("test add event");
+        },
+        handler2 = function () {
+            console.log("test add event2");
+        };
+    //添加事件
+    EventTarget.addHandler('test',handler1);
+    EventTarget.addHandler('test',handler2);
+    //移除事件
+    EventTarget.removeHandler('test',handler2);
+    document.getElementById('test').onclick = function (e) {
+        //触发事件
+        EventTarget.fire('test');
+    }
+</script>
+</body>
+</html>
