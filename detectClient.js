@@ -155,10 +155,7 @@ var client = function () {
     //检测ios版本
     if (system.mac && ua.indexOf('Mobile') > -1) {
         if (/CPU (?:iphone)?OS (\d+_\d+)/.test(ua)) {
-            system.ios = parseFloat(RegExp.$1.replace("_".
-            "."
-        ))
-            ;
+            system.ios = parseFloat(RegExp.$1.replace("_","."));
         } else {
             system.ios = 2;//不能真正测出来，所以只能猜测
         }

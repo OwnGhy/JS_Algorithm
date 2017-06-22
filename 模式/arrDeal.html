@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+    // 数组的处理方法
+
+    // 1.嵌套多层的数组平铺的方法
+    var list1 = [[0, 1], [2, 3], [4, 5]];
+    function flatten(arr) {
+        return arr.reduce(function (acc,val) {
+            return acc.concat(Array.isArray(val) ? flatten(val) : val);
+        },[]);
+    }
+//ES6语法
+//     const flatten = arr => arr.reduce(
+//         (acc, val) => acc.concat(
+//         Array.isArray(val) ? flatten(val) : val
+//     ),
+//         []
+//     );
+    console.log(flatten(list1)); // returns [0, 1, 2, 3, 4, 5]
+
+    var arrr = [1,23,3,3,2,1,6,5,4,6];
+    function duplicates(arr) {
+        var a1 =[],
+            a2 = [];
+        for(var i = 0, len = arr.length; i < len ; i++){
+            if(a1.indexOf(arr[i]) != -1 && a2.indexOf(arr[i]) == -1){
+                a2.push(arr[i]);
+            }else if(a1.indexOf(arr[i] == -1)){
+                a1.push(arr[i]);
+            }
+        }
+        return a2;
+    }
+    console.log(duplicates(arrr));
+
+</script>
+</body>
+</html>

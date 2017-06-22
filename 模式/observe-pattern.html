@@ -63,6 +63,13 @@
         //触发事件
         EventTarget.fire('test');
     }
+
+    function use_splice(arr,i,j) {
+        arr[i] = arr.splice(j,1,arr[i])[0];
+        return arr;
+    }
+   console.log(use_splice([1,2,3,4],1,2));
+
 </script>
 </body>
 </html>

@@ -6,7 +6,7 @@ function use_temp(a, b) {
 }
 
 //使用加法
-function use_sub(a, b) {
+function use_add(a, b) {
     a = a + b;
     b = a - b;
     a = a - b;
