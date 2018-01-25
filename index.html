@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>JS_ALGORITHM</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+</head>
+<body>
+<div id="root" style="height: 100%"></div>
+<script type="text/javascript">
+    console.log(getTheNPrime(10001))
+    function getTheNPrime(n) {
+    	let res = 2
+    	let step = 2;
+    	let num = 0;
+    	while(num < n) {
+    		if (isPrime(step)) {
+    			res = step
+    			num++
+    		}
+    		step++
+    	}
+    	return res 
+    }
+
+    function isPrime(n) {
+    	let res = true
+    	for (var i = 2; i < n; i++) {
+    		if (n%i == 0) {
+    			res = false
+    			break
+    		}
+    	}
+    	return res
+    }
+</script>
+</body>
+</html>

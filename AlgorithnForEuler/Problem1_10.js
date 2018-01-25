@@ -46,3 +46,88 @@ function maxPrimeFactor(n) {
 
     return pf;
 }
+
+// 第四题 求两个三位数相乘得到的最大的回文
+function getBiggestPalindromeOfThree(start, end) {
+    let res = 0
+    for (var i = start; i > end; i--) {
+        for (var j = start; j > end; j--) {
+            let temp = i * j
+            if (isPalindrome(temp) && temp > res) {
+                res = temp
+            }
+        }
+    }
+    return res
+}
+// 判断n是否为回文
+function isPalindrome (n) {
+    let temp = JSON.stringify(n).split('')
+    let s = 0;
+    let e = temp.length - 1;
+    while (s < e) {
+        if (temp[s] !== temp[e]) {
+            return false
+        }
+        s++;
+        e--;
+    }
+    return true
+}
+
+// 第五题 求能整出1-n的最小数
+function smallestFrom1TonWithoutRemainder (n) {
+    let res = false
+    let start = 20
+    while(!res) {
+        let temp = true
+        for (var i = 2; i < n; i++) {
+            if (start%i) {
+                temp = false
+                break
+            }
+        }
+        if (temp) {
+            res = start
+        }
+        start++
+    }
+    return res
+}
+
+// 第六题 求1-n之间的自然数的平方的和与1-n之间自然数的和的平方的差值
+function getNSquereMinusNsumSquere(n) {
+    let res1 = 0;
+    let res2 = 0;
+    for (var i = 1; i <= n; i++) {
+        res1 += i * i
+        res2 += i
+    }
+    return res2 * res2 - res1
+}
+
+// 第七题 求第n个质数
+function getTheNPrime(n) {
+    let res = 2
+    let step = 2;
+    let num = 0;
+    while(num < n) {
+        if (isPrime(step)) {
+            res = step
+            num++
+        }
+        step++
+    }
+    return res 
+}
+
+function isPrime(n) {
+    let res = true
+    for (var i = 2; i < n; i++) {
+        if (n%i == 0) {
+            res = false
+            break
+        }
+    }
+    return res
+}
